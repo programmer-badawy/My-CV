@@ -35,6 +35,9 @@ body ::selection {
 
     border: 2px solid black;
     display: flex;
+    /* height: 100vh; */
+    /* height: fit-content; */
+    position: relative;
 }
 
 /* Small */
@@ -84,7 +87,7 @@ body ::selection {
     letter-spacing: 1px;
     max-width: 100%;
     /* background-color: #b8e7ff; */
-
+    
 }
 /* e title */
 
@@ -95,7 +98,7 @@ body ::selection {
 aside{
     background-color: var(--main-color);
     width: 25%;
-
+    
     
     
 }
@@ -117,7 +120,7 @@ aside section.img-container .image{
     justify-content: center;
     align-items: center;
     overflow: hidden;
-            box-shadow: 0px 0px 20px 3px var(--main-color);
+    box-shadow: 0px 0px 20px 3px var(--main-color);
 }
 aside section.img-container .image img{
     width: 200px;
@@ -192,12 +195,12 @@ aside section.contact-data ul li:hover i{
         justify-content: center;
         align-items: center;
         gap: 15px;
-        }
-        aside section.contact-data ul i {
+    }
+    aside section.contact-data ul i {
         font-size: 22px;
-        }
+    }
 }
-        
+
 
 
 
@@ -209,9 +212,8 @@ aside section.contact-data ul li:hover i{
 main{
     background-color:#f0ffff;
     width: 75%;
-    /* height: 100vb; */
-    position: relative;
     padding: 60px;
+    
 }
 @media (max-width: 768px) {
     main{
@@ -221,7 +223,7 @@ main{
     
 }
 
-/* s Experience */
+/* Start Experience */
 /* g */
 .job{
     margin-bottom: 30px;
@@ -272,7 +274,126 @@ main{
 }
 /*  g*/
 
-/* e Experience */
+/* End Experience */
+/* Start Portfolio */
+.portfolio{
+    width: 100%;
+        height: fit-content;
+        position: relative;
+        
+}
+.projects{
+    /* background-color: red; */
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(100% / 3), 1fr));
+    align-items: center;
+    margin-bottom: 30px;
 
+}
+/* Medium */
+@media (max-width: 992px) {
+    .projects{
+        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    }
+}
+
+/* Small */
+@media (max-width: 768px) {
+    .projects{
+        width: 100%;
+    }
+    .projects .project {
+        width: 100%;
+        height: 100px;
+    }
+}
+
+/* g */
+.project{
+    background-color: #10cab7;
+    width: 190px;
+    height: 180px;
+    max-width: 80%;
+    margin-top: 30px;
+    box-shadow: 0 0 5px 3px #ededed;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    
+}
+
+/* Small */
+@media (max-width: 768px) {
+    .project {
+        width: 100%;
+    }
+
+}
+
+
+.project .project-image{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    
+
+}
+.project .project-image img{
+position: absolute;
+width: 100%;
+height: 100%;
+max-height: 100%;
+max-width: 100%;
+
+
+}
+.project .project-title{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: -150px;
+    left: 0px;
+    color: white;
+    font-size: 15px;
+    overflow: hidden;
+    z-index: 5;
+    padding: 40px 15px 10px 15px;
+    transition: all 0.2s ease-in-out;
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0.9) 100%) repeat scroll 0 0;
+}
+@media (max-width:767px) {
+    .project .project-title{
+        font-size: 10px;
+    }
+}
+.project:hover .project-title{
+    bottom: 0;
+    transition: .3s ease-in-out;
+}
+.project:hover .project-image img{
+    transition: all 1s ease-out;
+        transform: scale(1.2, 1.2) rotate(1deg);
+        -webkit-transition: all .5s ease-out;
+        -moz-transition: all .5s ease-out;
+        -ms-transition: all .5s ease-out;
+        -o-transition: all .5s ease-out;
+        -webkit-transform: scale(1.2, 1.2) rotate(1deg);
+        -moz-transform: scale(1.2, 1.2) rotate(1deg);
+        -ms-transform: scale(1.2, 1.2) rotate(1deg);
+        -o-transform: scale(1.2, 1.2) rotate(1deg);
+}
+
+
+/* g */
+
+
+/* End Portfolio */
 /* End Main */
 
